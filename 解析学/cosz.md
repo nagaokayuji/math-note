@@ -31,7 +31,7 @@ e^{2b}\cdot e^{-ai} - 8\cdot e^b + e^{ai} = 0
 $$
 $$
 e^b = 4 \pm \sqrt{15}
-$$
+$$ 
 よって $b=\log {(4\pm \sqrt{15})}$
 （純虚数の場合はこれでOK）
 
@@ -50,9 +50,11 @@ $$
 
 $$
 \cos x\cosh y = 4  \\
-\sin x \sinh y = 0
 $$
-$\sin x = 0 または \sinh y = 0$ となる
+$$
+\sin x \sinh y = 0
+$$(1)
+(1) より、 $\sin x = 0 または \sinh y = 0$ となる
 
 求める解は
 $$
