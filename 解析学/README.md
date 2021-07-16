@@ -1,2 +1,2 @@
 ## 解析学
-- [cosz](cosz.md)
+- [cosz=4](cosz.md)
