@@ -4,7 +4,7 @@ MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
 
-## $\\cosz = 4$ 
+## $\cos z = 4$ 
 z は複素数
 
 ### 考えたこと
@@ -28,7 +28,7 @@ e^{iz} + e^{-iz} = 8
 $$
 
 
-$z=a+bi$ ($a$, $b$ \in\mathbb{R}) とすると
+$z=a+bi$ ( $a, b \in\mathbb{R}$ ) とすると
 
 $$
 e^{2b}\cdot e^{-ai} - 8\cdot e^b + e^{ai} = 0 
@@ -55,9 +55,11 @@ $$
 $$
 \cos x\cosh y = 4  \\
 $$
+また、
 $$
 \sin x \sinh y = 0
 $$(1)
+
 (1) より、 $\sin x = 0 または \sinh y = 0$ となる
 
 求める解は
