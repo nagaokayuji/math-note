@@ -3,6 +3,14 @@
   charset="utf-8"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 ></script>
+<script type="text/x-mathjax-config">
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      processEscapes: true,
+    }
+  }
+</script>
 
 ## $\\cosz = 4$ 
 z は複素数
@@ -26,6 +34,7 @@ $$
 $$
 e^{iz} + e^{-iz} = 8
 $$
+
 
 $z=a+bi$ ($a$, $b$ \in\mathbb{R}) とすると
 
