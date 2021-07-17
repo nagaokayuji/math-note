@@ -9,6 +9,5 @@ export default async function markdownToHtml(markdownString: string) {
     .use(math)
     .use(htmlKatex)
     .process(markdownString);
-  console.log(result.toString());
   return result.toString();
 }
