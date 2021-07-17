@@ -3,8 +3,6 @@ title: 'cosz=4 '
 excerpt: 'cos z = 4 を満たす複素数'
 coverImage: '/assets/blog/hello-world/cover.jpg'
 date: '2020-03-16T05:35:07.322Z'
-# author:
-#   name: nagaokayuji
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
 ---
