@@ -1,4 +1,4 @@
 module.exports = {
   distDir: "build",
-  assetPrefix: "/math-note",
+  assetPrefix: process.env.GITHUB_PAGES ? "/repository-name" : "",
 };
