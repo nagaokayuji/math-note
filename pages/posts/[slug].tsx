@@ -35,7 +35,6 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 <title>
                   {post.title} | Next.js Blog Example with markdown
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
               </Head>
               <PostHeader
                 title={post.title}
