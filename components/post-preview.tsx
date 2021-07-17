@@ -18,7 +18,7 @@ const PostPreview = ({
   return (
     <div>
       <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={path(`/posts/${slug}`)} href="/posts/[slug]">
+        <Link as={path(`/posts/${slug}`)} href={path("/posts/[slug]")}>
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
