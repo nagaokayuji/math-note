@@ -1,17 +1,8 @@
 ---
 title: 'cosz=4 '
 excerpt: 'cos z = 4 を満たす複素数'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
-ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+date: '2021-07-16T05:35:07.322Z'
 ---
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({ extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] } });
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-
 ## $\cos z = 4$ 
 z は複素数
 
@@ -66,9 +57,9 @@ $$
 また、
 $$
 \sin x \sinh y = 0
-$$(1)
+$$
 
-(1) より、 $\sin x = 0 または \sinh y = 0$ となる
+より、 $\sin x = 0 または \sinh y = 0$ となる
 
 求める解は
 $$
