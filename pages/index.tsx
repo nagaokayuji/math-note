@@ -12,10 +12,11 @@ import Pagination from "../components/Pagination";
 
 type Props = {
   allPosts: Post[];
+  pagePosts: Post[];
   pagination: PaginationType;
 };
 
-const Index = ({ allPosts, pagination }: Props) => {
+const Index = ({ allPosts, pagePosts, pagination }: Props) => {
   console.log(JSON.stringify(pagination));
   return (
     <>
@@ -25,7 +26,13 @@ const Index = ({ allPosts, pagination }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {<MoreStories posts={allPosts} pagination={pagination} />}
+          {
+            <MoreStories
+              posts={allPosts}
+              pagePosts={pagePosts}
+              pagination={pagination}
+            />
+          }
         </Container>
       </Layout>
     </>
@@ -43,12 +50,13 @@ export const getStaticProps = async () => {
     "excerpt",
     "tags",
   ]);
+  const pagePosts = allPosts.slice(0, POSTS_PER_PAGE);
   const pagination = {
     currentPage: 1,
     totalPages: Math.ceil(allPosts.length / POSTS_PER_PAGE),
   };
 
   return {
-    props: { allPosts, pagination },
+    props: { allPosts, pagePosts, pagination },
   };
 };

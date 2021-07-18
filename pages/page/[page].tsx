@@ -11,10 +11,11 @@ import Pagination from "../../components/Pagination";
 
 type Props = {
   allPosts: Post[];
+  pagePosts: Post[];
   pagination: PaginationType;
 };
 
-const Index = ({ allPosts, pagination }: Props) => {
+const Index = ({ allPosts, pagePosts, pagination }: Props) => {
   console.log(JSON.stringify(pagination));
 
   return (
@@ -25,7 +26,13 @@ const Index = ({ allPosts, pagination }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {<MoreStories posts={allPosts} pagination={pagination} />}
+          {
+            <MoreStories
+              posts={allPosts}
+              pagePosts={pagePosts}
+              pagination={pagination}
+            />
+          }
         </Container>
       </Layout>
     </>
@@ -41,7 +48,7 @@ type Params = {
 };
 
 export const getStaticProps = async ({ params }: Params) => {
-  console.log(`page: ${params}`);
+  const pageNumber = parseInt(params.page);
   const allPosts = getAllPosts([
     "title",
     "date",
@@ -50,13 +57,19 @@ export const getStaticProps = async ({ params }: Params) => {
     "excerpt",
     "tags",
   ]);
+
+  const pagePosts = allPosts.slice(
+    POSTS_PER_PAGE * (pageNumber - 1),
+    POSTS_PER_PAGE * pageNumber
+  );
+
   const pagination = {
-    currentPage: 1,
+    currentPage: pageNumber,
     totalPages: Math.ceil(allPosts.length / POSTS_PER_PAGE),
   };
 
   return {
-    props: { allPosts, pagination },
+    props: { allPosts, pagePosts, pagination },
   };
 };
 

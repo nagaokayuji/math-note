@@ -6,16 +6,19 @@ import Pagination from "./Pagination";
 
 type Props = {
   posts: Post[];
+  pagePosts: Post[];
   pagination: PaginationType;
 };
 
-const MoreStories = ({ posts, pagination }: Props) => {
+const MoreStories = ({ posts, pagePosts, pagination }: Props) => {
   const [searchValue, setSearchValue] = useState("");
   const filteredPosts = posts.filter((post) => {
     const searchContent = post.title + post.excerpt + post.tags.join(" ");
     return searchContent.includes(searchValue);
   });
-  console.log(JSON.stringify(filteredPosts));
+
+  /** 検索時: filtered, 通常時: ページング範囲 */
+  const displayPosts = pagePosts && !searchValue ? pagePosts : filteredPosts;
 
   return (
     <section>
@@ -44,7 +47,7 @@ const MoreStories = ({ posts, pagination }: Props) => {
       </div>
       <ul>
         <div className="container mx-auto">
-          {filteredPosts.map((post) => (
+          {displayPosts.map((post) => (
             <PostPreview
               key={post.slug}
               title={post.title}

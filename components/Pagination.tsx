@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "./Link";
 
 type Props = {
   totalPages: number;
@@ -22,11 +22,7 @@ export default function Pagination({ totalPages, currentPage }: Props) {
           </button>
         )}
         {prevPage && (
-          <Link
-            href={
-              currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`
-            }
-          >
+          <Link href={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}`}>
             <button
             // rel="previous"
             >
@@ -47,7 +43,7 @@ export default function Pagination({ totalPages, currentPage }: Props) {
           </button>
         )}
         {nextPage && (
-          <Link href={`/blog/page/${currentPage + 1}`}>
+          <Link href={`/page/${currentPage + 1}`}>
             <button
             // rel="next"
             >
