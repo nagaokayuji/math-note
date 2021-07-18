@@ -31,7 +31,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <>
             <article className="mb-32">
               <Head>
-                <title>{post.title} | Next.js Blog Example with markdown</title>
+                <title>{post.title}</title>
               </Head>
               <PostHeader
                 title={post.title}
