@@ -1,6 +1,6 @@
 import Footer from "./footer";
 import Meta from "./meta";
-import Link from "next/link";
+import Link from "./Link";
 import path from "../lib/basePath";
 
 type Props = {
@@ -20,11 +20,14 @@ const Layout = ({ preview, children }: Props) => {
       />
       <div className="min-h-screen">
         <nav>
-          <Link href={path("/")}>
+          <Link href={"/"}>
             <a className="pr-10">Math note</a>
           </Link>
-          <Link href={path("/about")}>
-            <a>About(todo)</a>
+          <Link href={"/tags"}>
+            <a className="pr-10">Tags</a>
+          </Link>
+          <Link href={"/about"}>
+            <a className="pr-10">About</a>
           </Link>
         </nav>
         <main>{children}</main>
