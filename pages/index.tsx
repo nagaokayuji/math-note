@@ -21,14 +21,6 @@ const Index = ({ allPosts }: Props) => {
         <Head>
           <title>Math note</title>
         </Head>
-        <nav>
-          <Link href="/">
-            <a className="pr-10">Math note</a>
-          </Link>
-          <Link href="/about">
-            <a>About(todo)</a>
-          </Link>
-        </nav>
         <Container>
           <Intro />
           {/* {heroPost && (
@@ -55,6 +47,7 @@ export const getStaticProps = async () => {
     "slug",
     "coverImage",
     "excerpt",
+    "tags",
   ]);
 
   return {

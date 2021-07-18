@@ -38,6 +38,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
+                tags={post.tags}
               />
               <PostBody content={post.content} />
             </article>
@@ -64,16 +65,15 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "ogImage",
     "coverImage",
+    "tags", // ここに書かないといけない
   ]);
   const content = await markdownToHtml(post.content || "");
-  const title = await markdownToHtml(post.title || "");
 
   return {
     props: {
       post: {
         ...post,
         content,
-        // title,
       },
     },
   };

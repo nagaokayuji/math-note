@@ -7,9 +7,11 @@ type Props = {
   date: string;
   excerpt: string;
   slug: string;
+  tags: string[];
 };
 
-const PostPreview = ({ title, date, excerpt, slug }: Props) => {
+const PostPreview = ({ title, date, excerpt, slug, tags }: Props) => {
+  console.log(tags);
   return (
     <div key={slug} className="container mx-auto">
       <Link href={{ pathname: path(`/posts/${slug}`) }}>

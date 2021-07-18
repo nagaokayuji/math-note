@@ -5,9 +5,11 @@ type Props = {
   title: string;
   coverImage: string;
   date: string;
+  tags: string[];
 };
 
-const PostHeader = ({ title, coverImage, date }: Props) => {
+const PostHeader = ({ title, coverImage, date, tags }: Props) => {
+  console.warn(tags);
   return (
     <>
       {/* <PostTitle>{title}</PostTitle> */}

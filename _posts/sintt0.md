@@ -2,6 +2,7 @@
 title: 'θ→0 のとき sinθ/θ → 1'
 excerpt: 'θ→0 のとき sinθ/θ → 1'
 date: '2021-07-16T05:35:07.322Z'
+tags: ["解析学"]
 ---
 
 ## $\lim_{\theta \rightarrow 0}\sin \theta / \theta \rightarrow 1$
