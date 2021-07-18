@@ -45,24 +45,28 @@ $$
 $$z = x + iy (x, y \in \mathbb{R}) $$
 とおくと、
 $$
-\cos z = \cos(x+iy) = \cos x \cos (iy) - \sin x \sin (iy) \\
+\cos z = \cos(x+iy) = \cos x \cos (iy) - \sin x \sin (iy)
+$$
+$$
 = \cos x \cosh y - i\sin x \sinh y = 4
 $$
 
 より、
 
 $$
-\cos x\cosh y = 4  \\
+\cos x\cosh y = 4
 $$
 また、
 $$
 \sin x \sinh y = 0
 $$
 
-より、 $\sin x = 0 または \sinh y = 0$ となる
+より、 $\sin x = 0$ または $\sinh y = 0$ となる
 
 求める解は
 $$
-z = 2n\pi + i\log_e{(4 \pm \sqrt{15})} \\
+z = 2n\pi + i\log_e{(4 \pm \sqrt{15})}
+$$
+$$
 (n \in\mathbb{N})
 $$

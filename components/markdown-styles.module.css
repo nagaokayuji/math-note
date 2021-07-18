@@ -1,3 +1,5 @@
+/* Markdown Styles */
+/* Global */
 .markdown {
   @apply leading-relaxed text-sm;
 }
@@ -35,13 +37,20 @@
     @apply text-xl;
   }
 }
-.markdown :not(pre) > code {
-  @apply bg-indigo-50 p-1 font-semibold text-gray-600 rounded-lg;
+
+/* Links */
+.markdown a {
+  @apply text-blue-600;
+}
+.markdown a:hover {
+  @apply underline;
 }
 
-.markdown pre {
-  @apply mx-2;
+/* Paragraph */
+.markdown p {
+  @apply mb-4 leading-8 md:leading-10 text-justify;
 }
+
 /* Lists */
 .markdown ul,
 .markdown ol {
@@ -58,15 +67,26 @@
 .markdown ul {
   @apply list-disc;
 }
-/* Links */
-.markdown a {
-  @apply text-blue-600;
+
+/* Blockquotes */
+.markdown blockquote {
+  @apply p-2 mx-2 my-2 bg-gray-100 mb-4 border-l-4 border-gray-400  rounded-r-lg;
 }
-.markdown a:hover {
-  @apply underline;
+.markdown blockquote > p {
+  @apply mb-0;
 }
 
-/* Paragraph */
-.markdown p {
-  @apply mb-4 leading-8 md:leading-10 text-justify;
+/* Images */
+.markdown img {
+  @apply shadow-lg;
+}
+
+/* Code */
+.markdown :not(pre) > code {
+  @apply bg-indigo-50 p-1 font-semibold text-gray-600 rounded-lg;
+}
+
+/* Pre */
+.markdown pre {
+  @apply mx-2;
 }
