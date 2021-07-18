@@ -19,19 +19,19 @@ const Layout = ({ preview, children }: Props) => {
         crossOrigin="anonymous"
       />
       <div className="min-h-screen">
-        <nav>
+        <nav className="py-4">
           <Link href={"/"}>
-            <a className="pr-10 hover:underline hover:text-blue-800 cursor-pointer">
+            <a className="m-8 md:m-8 hover:underline hover:text-blue-800 cursor-pointer">
               Math note
             </a>
           </Link>
           <Link href={"/tags"}>
-            <a className="pr-10 hover:underline hover:text-blue-800 cursor-pointer">
+            <a className="m-8 md:m-8 hover:underline hover:text-blue-800 cursor-pointer">
               Tags
             </a>
           </Link>
           <Link href={"/about"}>
-            <a className="pr-10 hover:underline hover:text-blue-800 cursor-pointer">
+            <a className="m-8 md:m-8 hover:underline hover:text-blue-800 cursor-pointer">
               About
             </a>
           </Link>
