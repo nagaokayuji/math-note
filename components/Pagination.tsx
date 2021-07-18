@@ -1,11 +1,11 @@
 import Link from "./Link";
+import PaginationType from "../types/pagination";
 
-type Props = {
-  totalPages: number;
-  currentPage: number;
-};
-
-export default function Pagination({ totalPages, currentPage }: Props) {
+export default function Pagination({
+  totalPages,
+  currentPage,
+  basePath,
+}: PaginationType) {
   const prevPage = currentPage - 1 > 0;
   const nextPage = currentPage + 1 <= totalPages;
 
@@ -22,7 +22,7 @@ export default function Pagination({ totalPages, currentPage }: Props) {
           </button>
         )}
         {prevPage && (
-          <Link href={currentPage - 1 === 1 ? `/` : `/page/${currentPage - 1}`}>
+          <Link href={`${basePath}/${currentPage - 1}`}>
             <button
             // rel="previous"
             >
@@ -43,7 +43,7 @@ export default function Pagination({ totalPages, currentPage }: Props) {
           </button>
         )}
         {nextPage && (
-          <Link href={`/page/${currentPage + 1}`}>
+          <Link href={`${basePath}/${currentPage + 1}`}>
             <button
             // rel="next"
             >

@@ -66,6 +66,7 @@ export const getStaticProps = async ({ params }: Params) => {
   const pagination = {
     currentPage: pageNumber,
     totalPages: Math.ceil(allPosts.length / POSTS_PER_PAGE),
+    basePath: "/page",
   };
 
   return {
