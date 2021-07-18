@@ -27,10 +27,6 @@ const Index = ({ allPosts, pagination }: Props) => {
           <Intro />
           {<MoreStories posts={allPosts} pagination={pagination} />}
         </Container>
-        <Pagination
-          currentPage={pagination.currentPage}
-          totalPages={pagination.totalPages}
-        />
       </Layout>
     </>
   );
