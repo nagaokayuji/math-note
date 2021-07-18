@@ -45,3 +45,23 @@ export function getAllPosts(fields: string[] = []) {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
 }
+
+/** タグごとの名前、数 */
+export function getAllTags() {
+  const totalPosts = getAllPosts(["tags"]);
+  const tags = totalPosts
+    .map((post) => {
+      let ret: string[] = [];
+      for (let i = 0; i < post.tags.length; i++) {
+        ret.push(post.tags[i]);
+      }
+      return ret;
+    })
+    .flat();
+
+  let dict: { [key: string]: number } = {};
+  for (let key of tags) {
+    dict[key] = tags.filter((tag) => tag === key).length;
+  }
+  return dict;
+}

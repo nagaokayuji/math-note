@@ -7,7 +7,7 @@ import Pagination from "./Pagination";
 type Props = {
   posts: Post[];
   pagePosts: Post[];
-  pagination: PaginationType;
+  pagination?: PaginationType;
 };
 
 const MoreStories = ({ posts, pagePosts, pagination }: Props) => {
@@ -19,6 +19,8 @@ const MoreStories = ({ posts, pagePosts, pagination }: Props) => {
 
   /** 検索時: filtered, 通常時: ページング範囲 */
   const displayPosts = pagePosts && !searchValue ? pagePosts : filteredPosts;
+
+  const total = posts.length;
 
   return (
     <section>
@@ -63,8 +65,10 @@ const MoreStories = ({ posts, pagePosts, pagination }: Props) => {
         <Pagination
           currentPage={pagination.currentPage}
           totalPages={pagination.totalPages}
+          basePath={pagination.basePath}
         />
       )}
+      <p>全 {total} 件</p>
     </section>
   );
 };
