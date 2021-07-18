@@ -1,5 +1,5 @@
 import DateFormatter from "./date-formatter";
-import PostTitle from "./post-title";
+import Tag from "./Tag";
 
 type Props = {
   title: string;
@@ -9,14 +9,18 @@ type Props = {
 };
 
 const PostHeader = ({ title, coverImage, date, tags }: Props) => {
-  console.warn(tags);
   return (
     <>
-      {/* <PostTitle>{title}</PostTitle> */}
       <div className="max-w-2xl mx-auto">
+        <div className="flex flex-wrap">
+          {tags.map((tag) => (
+            <Tag key={tag} text={tag} />
+          ))}
+        </div>
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
         </div>
+        <hr></hr>
       </div>
     </>
   );

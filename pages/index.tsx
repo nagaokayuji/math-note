@@ -6,12 +6,17 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import Post from "../types/post";
 import Link from "next/link";
+import { POSTS_PER_PAGE } from "../lib/constants";
+import PaginationType from "../types/pagination";
+import Pagination from "../components/Pagination";
 
 type Props = {
   allPosts: Post[];
+  pagination: PaginationType;
 };
 
-const Index = ({ allPosts }: Props) => {
+const Index = ({ allPosts, pagination }: Props) => {
+  console.log(JSON.stringify(pagination));
   return (
     <>
       <Layout>
@@ -20,8 +25,12 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {<MoreStories posts={allPosts} />}
+          {<MoreStories posts={allPosts} pagination={pagination} />}
         </Container>
+        <Pagination
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+        />
       </Layout>
     </>
   );
@@ -38,8 +47,12 @@ export const getStaticProps = async () => {
     "excerpt",
     "tags",
   ]);
+  const pagination = {
+    currentPage: 1,
+    totalPages: Math.ceil(allPosts.length / POSTS_PER_PAGE),
+  };
 
   return {
-    props: { allPosts },
+    props: { allPosts, pagination },
   };
 };
