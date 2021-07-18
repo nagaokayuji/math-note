@@ -17,7 +17,6 @@ type Props = {
 };
 
 const Index = ({ allPosts, pagePosts, pagination }: Props) => {
-  console.log(JSON.stringify(pagination));
   return (
     <>
       <Layout>
