@@ -8,16 +8,11 @@ const Index = () => {
     <>
       <Layout>
         <Head>
-          <title>Math note</title>
+          <title>About</title>
         </Head>
         <Container>
           <Intro />
-          <h3>todo:</h3>
-          <ul>
-            <li>pagination</li>
-            <li>search by free words</li>
-            <li>search by tags</li>
-          </ul>
+          <h2>数学ノート</h2>
         </Container>
       </Layout>
     </>
