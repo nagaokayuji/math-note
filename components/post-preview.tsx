@@ -1,6 +1,7 @@
 import DateFormatter from "./date-formatter";
 import Link from "next/link";
 import path from "../lib/basePath";
+import Tag from "./Tag";
 
 type Props = {
   title: string;
@@ -11,7 +12,6 @@ type Props = {
 };
 
 const PostPreview = ({ title, date, excerpt, slug, tags }: Props) => {
-  console.log(tags);
   return (
     <div key={slug} className="container mx-auto">
       <Link href={{ pathname: path(`/posts/${slug}`) }}>
@@ -22,6 +22,11 @@ const PostPreview = ({ title, date, excerpt, slug, tags }: Props) => {
       <div className="mt-8 mb-10 text-justify">{excerpt}</div>
       <div className="text-lg mb-4">
         <DateFormatter dateString={date} />
+      </div>
+      <div className="flex flex-wrap">
+        {tags.map((tag) => (
+          <Tag key={tag} text={tag} />
+        ))}
       </div>
       <Link href={{ pathname: path(`/posts/${slug}`) }}>
         <a className="underline hover:text-blue-800">続きを読む</a>

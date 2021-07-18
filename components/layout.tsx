@@ -1,4 +1,3 @@
-import Alert from "./alert";
 import Footer from "./footer";
 import Meta from "./meta";
 import Link from "next/link";
@@ -28,7 +27,6 @@ const Layout = ({ preview, children }: Props) => {
             <a>About(todo)</a>
           </Link>
         </nav>
-        {/* <Alert preview={preview} /> */}
         <main>{children}</main>
       </div>
       <Footer />
