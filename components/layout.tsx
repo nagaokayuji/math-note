@@ -21,13 +21,19 @@ const Layout = ({ preview, children }: Props) => {
       <div className="min-h-screen">
         <nav>
           <Link href={"/"}>
-            <a className="pr-10">Math note</a>
+            <a className="pr-10 hover:underline hover:text-blue-800 cursor-pointer">
+              Math note
+            </a>
           </Link>
           <Link href={"/tags"}>
-            <a className="pr-10">Tags</a>
+            <a className="pr-10 hover:underline hover:text-blue-800 cursor-pointer">
+              Tags
+            </a>
           </Link>
           <Link href={"/about"}>
-            <a className="pr-10">About</a>
+            <a className="pr-10 hover:underline hover:text-blue-800 cursor-pointer">
+              About
+            </a>
           </Link>
         </nav>
         <main>{children}</main>
