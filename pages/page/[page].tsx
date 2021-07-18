@@ -16,6 +16,7 @@ type Props = {
 
 const Index = ({ allPosts, pagination }: Props) => {
   console.log(JSON.stringify(pagination));
+
   return (
     <>
       <Layout>
@@ -26,10 +27,6 @@ const Index = ({ allPosts, pagination }: Props) => {
           <Intro />
           {<MoreStories posts={allPosts} pagination={pagination} />}
         </Container>
-        <Pagination
-          currentPage={pagination.currentPage}
-          totalPages={pagination.totalPages}
-        />
       </Layout>
     </>
   );
