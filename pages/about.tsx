@@ -12,6 +12,12 @@ const Index = () => {
         </Head>
         <Container>
           <Intro />
+          <h3>todo:</h3>
+          <ul>
+            <li>pagination</li>
+            <li>search by free words</li>
+            <li>search by tags</li>
+          </ul>
         </Container>
       </Layout>
     </>
