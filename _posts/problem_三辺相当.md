@@ -1,5 +1,5 @@
 ---
-title: 問題_三辺相当
+title: 問題 三辺相当
 excerpt: 
 date: '2021-07-19'
 tags: 
