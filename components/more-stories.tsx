@@ -20,8 +20,6 @@ const MoreStories = ({ posts, pagePosts, pagination }: Props) => {
   /** 検索時: filtered, 通常時: ページング範囲 */
   const displayPosts = pagePosts && !searchValue ? pagePosts : filteredPosts;
 
-  const total = posts.length;
-
   return (
     <section>
       <div className="relative max-w-lg">
@@ -66,9 +64,9 @@ const MoreStories = ({ posts, pagePosts, pagination }: Props) => {
           currentPage={pagination.currentPage}
           totalPages={pagination.totalPages}
           basePath={pagination.basePath}
+          allCount={pagination.allCount}
         />
       )}
-      <p>全 {total} 件</p>
     </section>
   );
 };

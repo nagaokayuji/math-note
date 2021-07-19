@@ -5,9 +5,6 @@ import Layout from "../../components/layout";
 import { getAllPosts, getAllTags } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../types/post";
-import { POSTS_PER_PAGE } from "../../lib/constants";
-import PaginationType from "../../types/pagination";
-import Pagination from "../../components/Pagination";
 
 type Props = {
   allPosts: Post[];

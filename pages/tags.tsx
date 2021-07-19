@@ -1,14 +1,9 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllTags } from "../lib/api";
 import Head from "next/head";
-import Post from "../types/post";
 import Link from "../components/Link";
-import { POSTS_PER_PAGE } from "../lib/constants";
-import PaginationType from "../types/pagination";
-import Pagination from "../components/Pagination";
 import Tag from "../components/Tag";
 
 type Props = {
