@@ -14,7 +14,6 @@ export default function Pagination({
       <nav className="flex justify-between">
         {!prevPage && (
           <button
-            // rel="previous"
             className="cursor-auto disabled:opacity-50"
             disabled={!prevPage}
           >
@@ -23,11 +22,7 @@ export default function Pagination({
         )}
         {prevPage && (
           <Link href={`${basePath}/${currentPage - 1}`}>
-            <button
-            // rel="previous"
-            >
-              Previous
-            </button>
+            <button>Previous</button>
           </Link>
         )}
         <span>
@@ -35,7 +30,6 @@ export default function Pagination({
         </span>
         {!nextPage && (
           <button
-            // rel="next"
             className="cursor-auto disabled:opacity-50"
             disabled={!nextPage}
           >
@@ -44,11 +38,7 @@ export default function Pagination({
         )}
         {nextPage && (
           <Link href={`${basePath}/${currentPage + 1}`}>
-            <button
-            // rel="next"
-            >
-              Next
-            </button>
+            <button>Next</button>
           </Link>
         )}
       </nav>
