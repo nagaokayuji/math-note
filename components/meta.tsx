@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import path from '../lib/basePath'
+import Head from "next/head";
+import path from "../lib/basePath";
 
 const Meta = () => {
   return (
@@ -15,12 +15,9 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta
-        name="description"
-        content={`blog`}
-      />
+      <meta name="description" content={`mathematics`} />
     </Head>
-  )
-}
+  );
+};
 
-export default Meta
+export default Meta;
