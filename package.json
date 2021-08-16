@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 28164",
     "build": "next build && next export",
     "build:gh": "GITHUB_PAGES=true next build && next export",
     "start": "next start",
