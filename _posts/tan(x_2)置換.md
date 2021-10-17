@@ -71,7 +71,3 @@ $$
 が成り立つ。
 
 <hr>
-
-### 計算用紙
-
-![image](https://res.cloudinary.com/ddaz9etkx/image/upload/v1627191729/math/Untitled_Draft_-1_2_bli6iw.jpg)

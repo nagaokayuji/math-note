@@ -56,8 +56,3 @@ $$
 $$
 \bar{X} - k\frac{U}{\sqrt{n}} \le \mu \le \bar{X} + k\frac{U}{\sqrt{n}}
 $$
-
-
-### 下書き
-![image](https://res.cloudinary.com/ddaz9etkx/image/upload/v1627571689/math/Untitled_Draft_-3_osgcqw.jpg)
-![image](https://res.cloudinary.com/ddaz9etkx/image/upload/v1627491848/math/ttt_x3s4rg.jpg)
