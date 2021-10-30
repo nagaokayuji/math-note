@@ -4,9 +4,7 @@ const Intro = () => {
       <h1 className="text-3xl md:text-3xl font-bold tracking-tighter leading-tight md:pr-8">
         Math note
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        メモ書き
-      </h4>
+      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8"></h4>
     </section>
   );
 };
