@@ -34,5 +34,4 @@ yarn-error.log*
 .vercel
 
 **/.DS_Store
-**/**.ipynb*
-**/*.ipynb
+**/*checkpoint.ipynb
