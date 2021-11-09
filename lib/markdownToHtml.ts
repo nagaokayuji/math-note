@@ -14,7 +14,6 @@ export default async function markdownToHtml(markdownString: string) {
     // .use(slug)
     // .use(toc, { heading: "目次", maxDepth: 2 })
     .use(math)
-    // .use
     .use(htmlKatex)
     // .use(rehypeKatex)
     .process(markdownString);
