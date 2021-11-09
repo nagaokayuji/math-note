@@ -28,7 +28,6 @@ jobs:
       - name: build
         run: |
           npm run build:gh
-          touch out/.nojekyll
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
