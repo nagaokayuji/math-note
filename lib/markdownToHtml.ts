@@ -4,8 +4,6 @@ import math from "remark-math";
 import htmlKatex from "remark-html-katex";
 import gfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
-import slug from "remark-slug";
-import toc from "remark-toc";
 
 export default async function markdownToHtml(markdownString: string) {
   const result = await remark()
