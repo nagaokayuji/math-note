@@ -6,7 +6,7 @@ import gfm from "remark-gfm";
 
 export default async function markdownToHtml(markdownString: string) {
   const result = await remark()
-    .use(html)
+    .use(html, { sanitize: false })
     .use(gfm)
     .use(math)
     .use(htmlKatex)
